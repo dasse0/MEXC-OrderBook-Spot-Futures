@@ -32,6 +32,9 @@ int raylib_start() {
     while (!WindowShouldClose()) {
         BeginDrawing();
         ClearBackground(BLACK);
+
+        // OrderBook_MEXC_Spot.cpp and OrderBook_MEXC_Futures.cpp has same function name: RL_MEXC_Orderbook_Spot();
+        // No need to change that. only in CMAKE
         RL_MEXC_Orderbook_Spot();
         EndDrawing();
     }
